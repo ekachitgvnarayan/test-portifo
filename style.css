@@ -1,0 +1,67 @@
+/* A modern CSS reset based on best practices */
+
+/* 1. Use a more intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+  padding: 0; /* Optional: Some modern resets only zero margins and add padding back to specific elements */
+}
+
+/* 3. Allow percentage-based heights in the root element */
+html {
+  -webkit-text-size-adjust: 100%; /* Prevent iOS font size change */
+  scroll-behavior: smooth; /* Optional: enable smooth scrolling */
+}
+
+/* 4. Add accessible line-height and improve text rendering */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+
+/* 5. Improve media defaults (images, video, etc.) */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Ensure fonts inherit for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Remove default list styles (bullets) */
+ul, ol {
+  list-style: none;
+}
+
+/* 8. Create a stacking context without affecting layout */
+#root, #__next {
+  isolation: isolate;
+}
+
+/* 9. Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+p{
+    color:red
+}
+.blue{
+    color:blue
+}
